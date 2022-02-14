@@ -42,6 +42,22 @@ const createTokenWithExpiry = (payload, secretKey, expiryTime) => {
     }
 }
 
+const q04 = () => {
+    //Header ignored fot being the default
+    const payload = {
+        "id": 153,
+        "username": "sanchez",
+        "email": "rick@sanchez.com",
+        "role": "ADMIN"
+    };
+    const secret = "87764d1a-92dc-4ced-a758-9c898c31d525";
+
+    const createdToken = createToken(payload, secret);
+    console.log("Created Token for Q04:", createdToken);
+}
+
+q04();
+
 module.exports = {
     createToken,
     createTokenWithExpiry,
